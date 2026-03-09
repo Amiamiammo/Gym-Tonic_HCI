@@ -74,20 +74,6 @@ const isLoggedIn = (req, res, next) => {
 
 /*** Utility Functions ***/
 
-// This function is used to format express-validator errors as strings
-const errorFormatter = ({ location, msg, param, value, nestedErrors }) => {
-  let msgToReturn;
-
-  if (param === 'seatsToBook')
-    msgToReturn = 'Nessun posto richiesto';
-  else if (param === 'airplane_id')
-    msgToReturn = "ID Aereo non valido";
-  else if (param === 'id')
-    msgToReturn = "ID Aereo non valido";
-
-  return msgToReturn;
-};
-
 
 /* ------------- Users APIs ------------- */
 
